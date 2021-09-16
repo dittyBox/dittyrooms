@@ -1,1 +1,241 @@
+namespace MOM.MES.Entity
+{
+    public partial class Carrier
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Carrierid={0} State={1} Loadstate={2} Assignqty={3}",
+                this.Carrierid,
+                this.State,
+                this.Loadstate,
+                this.Assignqty);
+        }
+    }
 
+    public partial class Durable
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Durableid={0} State={1} Location={2} Usagecount={3} Cleancount={4}",
+                this.Durableid,
+                this.State,
+                this.Location,
+                this.Usagecount,
+                this.Cleancount);
+        }
+    }
+
+    public partial class Equipment
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Equipmentid={0} State={1} Processstate={2} Controlmode={3} Operationmode={4}",
+                this.Equipmentid,
+                this.State,
+                this.Processstate,
+                this.Controlmode,
+                this.Operationmode);
+        }
+    }
+
+    public partial class Lot
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Lotid={0} State={1} Prevgrade={2} Grade={3} Prevqty={4} Qty={5} Prevsubmaterialqty={6} Submaterialqty={7}",
+                    this.Lotid,
+                    this.State,
+                    this.Prevgrade,
+                    this.Grade,
+                    this.Prevqty,
+                    this.Qty,
+                    this.Prevsubmaterialqty,
+                    this.Submaterialqty);
+        }
+    }
+
+    public partial class Lotdefect
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Lotid={0} Defectid={1} Defectqty={2} Repeatcount={3}",
+                    this.Lotid,
+                    this.Defectid,
+                    this.Defectqty,
+                    this.Repeatcount);
+        }
+    }
+
+
+    public partial class Lothold
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Lotid={0} Holdcode={1} Releasecode={2}",
+                    this.Lotid,
+                    this.Holdcode,
+                    this.Releasecode);
+        }
+    }
+
+    public partial class Lotcarrierrel
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Lotid={0} Carrierid={1} Slotposition={2} Assignqty={3}",
+                this.Lotid,
+                this.Carrierid,
+                this.Slotposition,
+                this.Assignqty);
+        }
+    }
+
+    public partial class Lotfutureaction
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Lotfutureactionsysid={0} Lotid={1} Actiontype={2} Actionprocesssegmentid={3}",
+                    this.Lotfutureactionsysid,
+                    this.Lotid,
+                    this.Actiontype,
+                    this.Actionprocesssegmentid);
+        }
+    }
+
+    public partial class Lotmateriallotrel
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Lotid={0} Materiallotid={1} Qty={2} Processsegmentid={3} Repeatcount={4}",
+                this.Lotid,
+                this.Materiallotid,
+                this.Qty,
+                this.Processsegmentid,
+                this.Repeatcount);
+        }
+    }
+
+    public partial class Materiallot
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Materiallotid={0} Prevstate={1} State={2} Prevqty={3} Qty={4} Lossqty={5} Location={6} Equipmentid={7}",
+                this.Materiallotid,
+                this.Prevstate,
+                this.State,
+                this.Prevqty,
+                this.Qty,
+                this.Lossqty,
+                this.Location,
+                this.Equipmentid);
+        }
+    }
+
+    public partial class Materiallotcarrierrel
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Materiallotid={0} Carrierid={1} Slotposition={2} Assignqty={3}",
+                this.Materiallotid,
+                this.Carrierid,
+                this.Slotposition,
+                this.Assignqty);
+        }
+    }
+
+    public partial class Materiallotdurablerel
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Materiallotid={0} Durableid={1} Durableposition={2} Qty={3}",
+                this.Materiallotid,
+                this.Durableid,
+                this.Durableposition,
+                this.Qty);
+        }
+    }
+
+    public partial class Port
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Equipmentid={0} Portid={1} State={2} Transferstate={3} Accessmode={4} Porttype={5}",
+                this.Equipmentid,
+                this.Portid,
+                this.State,
+                this.Transferstate,
+                this.Accessmode,
+                this.Porttype);
+        }
+    }
+
+    public partial class Producedmaterial
+    {
+        /// <summary>
+        /// Override object.ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return string.Format("Producedmaterialid={0} State={1} Prevgrade={2} Grade={3} Prevsubmaterialqty={4} Submaterialqty={5}",
+                this.Producedmaterialid,
+                this.State,
+                this.Prevgrade,
+                this.Grade,
+                this.Prevsubmaterialqty,
+                this.Submaterialqty);
+        }
+    }
+}
